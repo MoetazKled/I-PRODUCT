@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+  
+    <link rel="stylesheet" href="style.css">
+   
+<script>
+function newDoc() {
+  window.location.assign("../task-list/task.html")
+}
+</script>
+
+
+</head>
+<body>
+
+<div class="crud">
+
+<div class="head">
+  <h2>I PRODUCT</h2>
+  <p>PRODUCT MANAGEMENT SYSTEME </p>
+ </div>
+
+  <div class="inputs">
+    <input type="title" type="text" id="title" placeholder="Title">
+   <div class="price">
+    <input type="text" onkeyup="getTotal()" id="price" placeholder="Price">
+    <input type="text" onkeyup="getTotal()" id="taxes" placeholder="Taxes">
+    <input type="text" onkeyup="getTotal()" id="ads" placeholder="ADS">
+    <input type="text" onkeyup="getTotal()" id="discount" placeholder="Discount">
+         <small id="total">00000</small>
+           </div>
+
+        <input type="count" type="number" id="count" placeholder="Count">  
+       <input type="category" type="text" id="category" placeholder="Category">
+     <button id="submit">Create</button>
+  </div>
+
+    <div class="outputs"> 
+        <div class="searchBlock">
+            <input onkeyup="searchData(this.value)" type="text" name="search" id="search" placeholder="Search">
+               <div class="btnSearch">
+                     <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                     <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category </button>
+               </div>
+        </div>
+
+        <div id="deleteAll"></div>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+
+
+            <tbody id="tbody">
+             
+            </tbody>
+
+
+        </table>
+    </div>
+
+          <input type="button" value="Load new document" onclick="newDoc()">
+
+
+    <script src="script.js"> </script>
+</body>
+</html>
+
+
+
